@@ -110,8 +110,7 @@
       $r=mysqli_query($con,"select * from medicines ");
       $i=1;
 
-       while(i!=3)
-       {
+       
              echo "<div class='page-section pb-0'>
              <div class='container'>
                <div class='row align-items-center'>
@@ -127,8 +126,7 @@
                      </a>
                 </div>";
                       
-         }
-
+         
 
  ?>
 
@@ -147,6 +145,7 @@
                  echo "ID: $row[2]<br>";
                  echo "Contact no. : $row[5]<br><br>";
                  echo "<B>$row[4]</B><br>";
+                 $i=$i+1;
             ?>
           </div>
           
