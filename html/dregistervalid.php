@@ -14,7 +14,7 @@ session_start();
       $pwd=$_POST["pwd"];
       $cpwd=$_POST["cpwd"];
       
-      move_uploaded_file($_FILES["imgd"]["tmp_name"],"../docimageregistered/".$_FILES["imgd"]["name"]);
+      move_uploaded_file($_FILES["imgd"]["tmp_name"],"../medicineimages/".$_FILES["imgd"]["name"]);
       $pic=$_FILES["imgd"]["name"];
       
       

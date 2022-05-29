@@ -75,7 +75,7 @@
               <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Doctors</a>
+              <a class="nav-link" href="../showproductaddoctors/showdoctors.php">Doctors</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="doctors.html">Video Consulation</a>

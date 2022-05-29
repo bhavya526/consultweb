@@ -1,3 +1,6 @@
+<?php
+  session_start();
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,7 +86,23 @@
               <a class="nav-link" href="labtest.php">Lab Tests</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-primary ml-lg-3" href="login.php">Login / Register</a>
+              <?php
+              if(isset($_SESSION['log']))
+              {
+                $logornot=$_SESSION["log"];
+                if($logornot=="yes")
+                {
+                  echo "<a class='btn btn-primary ml-lg-3' href='logout.php'>Logout</a>";
+                }
+              } 
+                  else 
+                  {
+                    echo  "<a class='btn btn-primary ml-lg-3' href='login.php'>Login / Register</a>";
+                  }
+               ?>
+            </li>
+            <li class="nav-item">
+              <a class="btn ml-lg-3" href="chkmedcart.php"><img src="../assets/img/cart1.png" style="height:2.5em;width:2.5em"></a>
             </li>
           </ul>
         </div> <!-- .navbar-collapse -->
@@ -103,57 +122,42 @@
       </div>
     </div>
   </div>
-  
   <?php
-      $iidd=$_SESSION["ddii"];
+      
       $con=mysqli_connect("localhost","root","","drconsult");
-      $r=mysqli_query($con,"select * from medicines ");
-      $i=1;
-
-       
+      $r=mysqli_query($con,"select * from medicines");
+      while($row=mysqli_fetch_array($r))
+          {
              echo "<div class='page-section pb-0'>
              <div class='container'>
                <div class='row align-items-center'>
-               <div class='col-lg-6 wow' data-wow-delay='400ms'>
+               <div class='col-lg-5 wow' data-wow-delay='400ms'>
                     <a href=''>
-                      <div class='img-place custom-img-1' style='border:1px solid black;height:15.625em;width:15.625em;border-radius:50%'>";
-                      if($row=mysqli_fetch_array($r))
-                      {
-                       echo "<img src='../docimageregistered/$row[7]'>";
-
-                      }
-                echo "</div>
-                     </a>
-                </div>";
+                      <div class='img-place custom-img-1' style=';height:15.625em;width:22.625em;'>";
+                     
                       
-         
-
- ?>
-
-  
-
-    
-                    <?php
+                       echo "<img src='../medicineimages/$row[5]'>";
                         
-                         
-                     ?>
-               
-          <div class="col-lg-6 py-3 wow ">
-            <h1>My Profile</h1>
-            <?php
-                 echo "$row[1]<br>";
-                 echo "ID: $row[2]<br>";
-                 echo "Contact no. : $row[5]<br><br>";
-                 echo "<B>$row[4]</B><br>";
-                 $i=$i+1;
+                       echo "</div>
+                     </a>
+                     <br>";    
+                     echo "<a href='chkmedcart.php' class='btn btn-primary' style='margin-left:280px'>Add to cart</a>
+                </div>
+                <div class='col-lg-7 py-3 wow '>
+                <h3>$row[1]</h3>";
+                echo "Manufacturer: $row[2]<br>";
+                     echo "Price: <B>$row[3]</B><br><br>";
+                     echo "$row[4]<br>
+                     </div>
+              
+                     </div>
+                   </div>
+                 </div> <!-- .bg-light -->
+               </div> <!-- .bg-light -->
+                                 
+                     ";
+          }
             ?>
-          </div>
-          
-        </div>
-      </div>
-    </div> <!-- .bg-light -->
-  </div> <!-- .bg-light -->
-
   
   <footer class="page-footer">
     <div class="container">
