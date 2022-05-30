@@ -70,13 +70,13 @@
             <li class="nav-item ">
               <a class="nav-link" href="index.php">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">Doctors</a>
+            <li class="nav-item active" >
+              <a class="nav-link" href="showdoctors.html">Doctors</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="doctors.html">Video Consulation</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a class="nav-link" href="medicine.php">Medicines</a>
             </li>
             <li class="nav-item">
@@ -122,9 +122,9 @@
                             <div class='bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3'>New</div>
                         </div>
                                 <div class='text-center p-4'>
-                                    <a class='d-block h5 mb-2' href=''>Fresh Tomato</a>
-                                    <span class='text-primary me-1'>$19.00</span>
-                                    <span class='text-body text-decoration-line-through'>$29.00</span>
+                                    <a class='d-block h5 mb-2' href=''>$rowo[1]</a>
+                                    <span class='text-primary me-1'>$rowo[4]</span>
+                                    <span class='text-body text-decoration-line-through'></span>
                                 </div>
                                 <div class='d-flex border-top'>
                                     <small class='w-50 text-center border-end py-2'>
@@ -154,9 +154,9 @@
                             <div class='bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3'>New</div>
                         </div>
                                 <div class='text-center p-4'>
-                                    <a class='d-block h5 mb-2' href=''>Fresh Tomato</a>
-                                    <span class='text-primary me-1'>$19.00</span>
-                                    <span class='text-body text-decoration-line-through'>$29.00</span>
+                                    <a class='d-block h5 mb-2' href=''>$roww[1]</a>
+                                    <span class='text-primary me-1'>$roww[4]</span>
+                                    <span class='text-body text-decoration-line-through'></span>
                                 </div>
                                 <div class='d-flex border-top'>
                                     <small class='w-50 text-center border-end py-2'>
@@ -184,9 +184,9 @@
                                     <div class='bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3'>New</div>
                                 </div>
                                 <div class='text-center p-4'>
-                                    <a class='d-block h5 mb-2' href=''>Fresh Tomato</a>
-                                    <span class='text-primary me-1'>$19.00</span>
-                                    <span class='text-body text-decoration-line-through'>$29.00</span>
+                                    <a class='d-block h5 mb-2' href=''>$rows[1]</a>
+                                    <span class='text-primary me-1'>$rows[4]</span>
+                                    <span class='text-body text-decoration-line-through'></span>
                                 </div>
                                 <div class='d-flex border-top'>
                                     <small class='w-50 text-center border-end py-2'>
@@ -215,16 +215,16 @@
                             <div class='bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3'>New</div>
                         </div>
                                 <div class='text-center p-4'>
-                                    <a class='d-block h5 mb-2' href=''>Fresh Tomato</a>
-                                    <span class='text-primary me-1'>$19.00</span>
-                                    <span class='text-body text-decoration-line-through'>$29.00</span>
+                                    <a class='d-block h5 mb-2' href=''>$row[1]</a>
+                                    <span class='text-primary me-1'>$row[4]</span>
+                                    <span class='text-body text-decoration-line-through'></span>
                                 </div>
                                 <div class='d-flex border-top'>
                                     <small class='w-50 text-center border-end py-2'>
                                         <a class='text-body' href=''><i class='fa fa-eye text-primary me-2'></i>View detail</a>
                                     </small>
                                     <small class='w-50 text-center py-2'>
-                                        <a class='text-body' href=''><i class='fa fa-shopping-bag text-primary me-2'></i>Add to cart</a>
+                                        <a class='text-body' href=''><i class='fa fa-shopping-bag text-primary me-2'></i>Book appointment</a>
                                     </small>
                                 </div>
                             </div>
@@ -232,6 +232,7 @@
                       ?>
                        
                                                <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
+                                                 <br><br>
                             <a class="btn btn-primary rounded-pill py-3 px-5" href="">Browse More Products</a>
                         </div>
                     </div>

@@ -128,7 +128,9 @@
       $r=mysqli_query($con,"select * from medicines");
       while($row=mysqli_fetch_array($r))
           {
-             echo "<div class='page-section pb-0'>
+             echo "
+             <form action='movetocart.php' method='POST'>
+             <div class='page-section pb-0'>
              <div class='container'>
                <div class='row align-items-center'>
                <div class='col-lg-5 wow' data-wow-delay='400ms'>
@@ -140,9 +142,24 @@
                         
                        echo "</div>
                      </a>
-                     <br>";    
-                     echo "<a href='chkmedcart.php' class='btn btn-primary' style='margin-left:280px'>Add to cart</a>
-                </div>
+                     <br>"; 
+                     
+                     if(isset($_SESSION['cart']))
+                     {
+                
+                if($_SESSION["cart"]==$row[0])
+                {
+                  echo "<input type='submit' value='View Cart' class='btn btn-primary' style='margin-left:17.5em'>";
+                }
+              } 
+                  else 
+                  {
+                    echo "<input type='submit' value='Add to cart' class='btn btn-primary' style='margin-left:17.5em'>";
+                  }
+       
+                   echo"  <input type='text' value='$row[0]' name='med1' hidden>
+                     
+                     </div>
                 <div class='col-lg-7 py-3 wow '>
                 <h3>$row[1]</h3>";
                 echo "Manufacturer: $row[2]<br>";
@@ -154,7 +171,7 @@
                    </div>
                  </div> <!-- .bg-light -->
                </div> <!-- .bg-light -->
-                                 
+                 </form>                
                      ";
           }
             ?>
