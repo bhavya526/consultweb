@@ -122,9 +122,14 @@
        <div><img class='img-fluid' src='../docimageregistered/$row[7]'></div>
      </div>
      <div class='col-xs-9 col-md-9'>
-       <div >Small</div>
+       <div >$row[1]</div>
+       <div >$row[4]</div>
+       <div>Experience 5+</div>
+       <br><br>
+       <input type='submit' value='Consult' class='btn btn-primary' style='margin-left:17.5em'>
      </div>
    </div>
+   <br>
  </div>
    
    ";
