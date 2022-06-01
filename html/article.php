@@ -132,7 +132,7 @@
                            <img src="../assets/img/blog11.png" alt="#" />
                         </div>
                         <div class="carousel-item">
-                           <img src="../assets/img/blog12.jpg" alt="#" />
+                           <img src="../assets/img/health1.jpg" style="width:40em"alt="#" />
                         </div>
                      </div>
                      <!-- Left and right controls -->
@@ -146,12 +146,12 @@
                </div>
                <div class="col-md-5">
                   <div class="full slider_cont_section">
-                     <h4>More Featured in</h4>
-                     <h3>Jack Blogger</h3>
-                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look</p>
+                     <h3>Healthy Eating</h3>
+                     <h4>-a lifestyle</h4>
+                     <p>A healthy diet is essential for good health and nutrition. It protects you against many chronic noncommunicable diseases, such as heart disease, diabetes and cancer. Eating a variety of foods and consuming less salt, sugars and saturated and industrially-produced trans-fats, are essential for healthy diet.</p>
                      <div class="button_section">
                         <a href="about.html">Read More</a>
-                        <a href="contact.html">Contact Us</a>
+                        <!-- <a href="contact.html">Contact Us</a> -->
                      </div>
                   </div>
                </div>
@@ -165,82 +165,58 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="heading">
-                     <h3>About <span class="orange_color">Us</span></h3>
+                    <br><br>
+                     <!-- <h3>About <span class="orange_color">Us</span></h3> -->
                   </div>
                </div>
             </div>
-            <div class="row">
+            <div class="row" style="height:19em">
                <div class="col-md-6">
-                  <img src="../assets/img/labtest.jpg" alt="#" style="height:30%" />
+                  <img src="../assets/img/exercise.jpg" alt="#" style="height:30%" />
                </div>
                <div class="col-md-6">
                   <div class="full blog_cont">
-                     <h4>The biggest and most awesome camera  of  year</h4>
-                     <h5>MAY 14 2019 5 READ</h5>
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                     <h3>Exercise and body</h3>
+                     <p>Exercise strengthens your heart and improves your circulation. The increased blood flow raises the oxygen levels in your body. This helps lower your risk of heart diseases such as high cholesterol, coronary artery disease, and heart attack. Regular exercise can also lower your blood pressure and triglyceride levels.</p>
+
+                     <div class="button_section">
+                        <a href="about.html">Read More</a>
+                        <!-- <a href="contact.html">Contact Us</a> -->
+                     </div>
+
+
                   </div>
                </div>
             </div>
             <div class="row margin_top_30">
                <div class="col-md-6">
-                  <img src="../assets/img/labtest.jpg" alt="#" style="height:30%"/>
+                  <img src="../assets/img/sleep.jpg" alt="#" style="height:90%"/>
                </div>
                <div class="col-md-6">
                   <div class="full blog_cont">
-                     <h4>What 3 years of android taught me the hard way</h4>
-                     <h5>MAY 19 2019  5 READ</h5>
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                  </div>
+                     <h4>Sleep and stress</h4>
+                     <p>Stress can adversely affect sleep quality and duration, while insufficient sleep can increase stress levels. Both stress and a lack of sleep can lead to lasting physical and mental health problems. It is crucial that people who are having issues with stress or lack of sleep do not try to tackle these problems alone.</p>
+
+                     <div class="button_section">
+                        <a href="about.html">Read More</a>
+                        
+                        <!-- <a href="contact.html">Contact Us</a> -->
+                     </div>
+
+                   </div>
                </div>
             </div>
             <div class="row margin_top_30">
                <div class="col-md-12">
-                  <div class="button_section full center margin_top_30">
-                     <a style="margin:0;" href="about.html">Read More</a>
-                  </div>
+                  
                </div>
             </div>
          </div>
       </div>
    
   
+      <br><br><br>
   
-  <div class="page-section">
-    <div class="container">
-      <h1 class="text-center wow fadeInUp">Make an Appointment</h1>
-
-      <form class="main-form">
-        <div class="row mt-5 ">
-          <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
-            <input type="text" class="form-control" placeholder="Full name">
-          </div>
-          <div class="col-12 col-sm-6 py-2 wow fadeInRight">
-            <input type="text" class="form-control" placeholder="Email address..">
-          </div>
-          <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
-            <input type="date" class="form-control">
-          </div>
-          <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
-            <select name="departement" id="departement" class="custom-select">
-              <option value="general">General Health</option>
-              <option value="cardiology">Cardiology</option>
-              <option value="dental">Dental</option>
-              <option value="neurology">Neurology</option>
-              <option value="orthopaedics">Orthopaedics</option>
-            </select>
-          </div>
-          <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
-            <input type="text" class="form-control" placeholder="Number..">
-          </div>
-          <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
-            <textarea name="message" id="message" class="form-control" rows="6" placeholder="Enter message.."></textarea>
-          </div>
-        </div>
-
-        <button type="submit" class="btn btn-primary mt-3 wow zoomIn">Submit Request</button>
-      </form>
-    </div>
-  </div> <!-- .page-section -->
 
   
 
