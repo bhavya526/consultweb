@@ -68,7 +68,7 @@
         <div class="collapse navbar-collapse" id="navbarSupport">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item ">
-              <a class="nav-link" href="index.php">Home</a>
+              <a class="nav-link" href="../html/index.php">Home</a>
             </li>
             <li class="nav-item active" >
               <a class="nav-link" href="showdoctors.html">Doctors</a>
@@ -77,10 +77,10 @@
               <a class="nav-link" href="doctors.html">Video Consulation</a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="medicine.php">Medicines</a>
+              <a class="nav-link" href="../html/medicine.php">Medicines</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="labtest.php">Lab Tests</a>
+              <a class="nav-link" href="../html/labtest.php">Lab Tests</a>
             </li>
             <li class="nav-item">
               <a class="btn btn-primary ml-lg-3" href="login.php">Login / Register</a>
@@ -131,7 +131,7 @@
                                         <a class='text-body' href=''><i class='fa fa-eye text-primary me-2'></i>View detail</a>
                                     </small>
                                     <small class='w-50 text-center py-2'>
-                                        <a class='text-body' href=''><i class='fa fa-shopping-bag text-primary me-2'></i>Add to cart</a>
+                                        <a class='text-body' href=''><i class='fa fa-shopping-bag text-primary me-2'></i>Consult</a>
                                     </small>
                                 </div>
                             </div>
@@ -163,7 +163,7 @@
                                         <a class='text-body' href=''><i class='fa fa-eye text-primary me-2'></i>View detail</a>
                                     </small>
                                     <small class='w-50 text-center py-2'>
-                                        <a class='text-body' href=''><i class='fa fa-shopping-bag text-primary me-2'></i>Add to cart</a>
+                                        <a class='text-body' href=''><i class='fa fa-shopping-bag text-primary me-2'></i>Consult</a>
                                     </small>
                                 </div>
                             </div>
@@ -193,7 +193,7 @@
                                         <a class='text-body' href=''><i class='fa fa-eye text-primary me-2'></i>View detail</a>
                                     </small>
                                     <small class='w-50 text-center py-2'>
-                                        <a class='text-body' href=''><i class='fa fa-shopping-bag text-primary me-2'></i>Add to cart</a>
+                                        <a class='text-body' href=''><i class='fa fa-shopping-bag text-primary me-2'></i>Consult</a>
                                     </small>
                                 </div>
                             </div>
@@ -224,7 +224,7 @@
                                         <a class='text-body' href=''><i class='fa fa-eye text-primary me-2'></i>View detail</a>
                                     </small>
                                     <small class='w-50 text-center py-2'>
-                                        <a class='text-body' href=''><i class='fa fa-shopping-bag text-primary me-2'></i>Book appointment</a>
+                                        <a class='text-body' href=''><i class='fa fa-shopping-bag text-primary me-2'></i>Consult</a>
                                     </small>
                                 </div>
                             </div>
@@ -233,7 +233,7 @@
                        
                                                <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
                                                  <br><br>
-                            <a class="btn btn-primary rounded-pill py-3 px-5" href="">Browse More Products</a>
+                            <a class="btn btn-primary rounded-pill py-3 px-5" href="">Browse More</a>
                         </div>
                     </div>
                 </div>

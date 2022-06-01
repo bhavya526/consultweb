@@ -16,5 +16,5 @@
         $_SESSION["cart"]=$fg;
         header("location:buymedi.php");
         
-
+        
      }
