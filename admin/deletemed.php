@@ -209,32 +209,50 @@
       </div>
     </div>
   </div>
-            <br><br>
-        <form action="passmed.php" method="POST">          
-            <div class="row mt-5 ">
-          <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
-            <input type="text" class="form-control" name="m1"  placeholder="Medicine name">
-          </div>
-          <div class="col-12 col-sm-6 py-2 wow fadeInRight">
-            <input type="text" class="form-control" name="m2" placeholder="Manufacturer name">
-          </div>
-         
-          <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
-            <input type="number" class="form-control" name="m3" placeholder="Price">
-          </div>
-         
-          <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
-            <textarea id="message" class="form-control" rows="6" name="m4" placeholder="Description"></textarea>
-          </div>
-          <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
-            <span>Medicine Image &nbsp </span> <input type="file" id="myfile" name="myfile">
-          </div>
-        </div>
-
-        <input type="submit" class="btn btn-primary mt-3 wow zoomIn" value="Submit"> 
-        
-            
-    <form>  
+  <div style='float:right; width:80%'>
+	<br>
+	<table id="example" class="display" style='width:50em;margin-left:-1.875em !important' >
+         <thead>
+             <tr style='color:black;font-weight:bold'>
+                 <th style='text-align:center'>Sno</th>
+                 <th style='text-align:center'>Name</th>
+		         <th style='text-align:center'>Maufacturer</th>
+			     <th style='text-align:center'>Price</th>
+			     
+				 <th></th>
+				 <th></th>
+				 <th></th>
+				 
+             </tr>
+         </thead><tbody>
+	<?php
+	 $sno=1;
+	     $con=mysqli_connect("localhost","root","","drconsult");
+         $s=mysqli_query($con,"select * from medicines");
+	  
+	     
+	              while($row=mysqli_fetch_array($s))
+                 {
+                    echo "<tr style='color:black;'>";
+                    echo "<td align='center'>$sno</td>";
+                         echo "<td align='center'>$row[1]</td>";
+                         echo "<td align='center'>$row[2]</td>";
+                         echo "<td align='center'>$row[3]</td>";
+                         
+                         echo "<td></td>";
+  
+                         echo "<td></td>";  
+  
+                         echo "<td><a href='del.php?a=$row[0]'><img src='img/delete.png'   style='width:1.45em;height:1.45em;'></a></td>";
+                         echo "</tr>";
+                         $sno++;
+					}
+					
+					?>
+                      
+			</tbody></table>		   
+	
+    </div>
             
             
             
