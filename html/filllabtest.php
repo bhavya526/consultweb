@@ -106,7 +106,7 @@
         
         <h1 class="display-4" style=""><?php echo $_SESSION["disease"]. " Test ";  ?></h1>
         <span class="display-4" style="font-size:2em"><?php echo "Rs.". $_SESSION["price"];  ?></span>
-        <form class="main-form" method="POST" action="testpay1.php">
+        <form class="main-form" method="POST" action="filltestform.php">
         <div class="row mt-5 ">
           <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
             <input type="text" class="form-control" name="nn" placeholder="Full name">
@@ -115,7 +115,7 @@
             <input type="number" class="form-control" name="aa" placeholder="Age">
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
-          <select name="departement" id="departement" name="gg" class="custom-select">
+          <select id="departement" name="gg" class="custom-select">
               <option value="Male">Gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
@@ -126,13 +126,13 @@
           </div>
          
           <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
-            <textarea name="message" id="message" class="form-control" rows="6" name="aa1" placeholder="Address"></textarea>
+            <textarea id="message" class="form-control" rows="6" name="aa1" placeholder="Address"></textarea>
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
-            <input type="date" name="dd" class="form-control">
+            <input type="date" name="dd1" class="form-control">
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
-            <input type="time" name="tt" class="form-control">
+            <input type="time" name="tt1" class="form-control">
           </div>
         </div>
 

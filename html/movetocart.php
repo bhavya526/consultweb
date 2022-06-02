@@ -14,7 +14,5 @@
      if($rr)
      {
         $_SESSION["cart"]=$fg;
-        header("location:buymedi.php");
-        
-        
+        header("location:buymedi.php"); 
      }

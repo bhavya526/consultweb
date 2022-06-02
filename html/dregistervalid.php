@@ -17,7 +17,6 @@ session_start();
       move_uploaded_file($_FILES["imgd"]["tmp_name"],"../medicineimages/".$_FILES["imgd"]["name"]);
       $pic=$_FILES["imgd"]["name"];
       
-      
 
       if($cpwd!=$pwd)
 			{

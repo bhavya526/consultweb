@@ -1,4 +1,7 @@
 
+<?php
+   session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -131,9 +134,10 @@
             </div>
             </div>
             </div>
+           
 
             <div class="col-lg-3 py-2 wow zoomIn" >
-          <div class="card-blog">
+            <div class="card-blog">
             <div class="header" style="background-color:white;">
                  
               <a href="" class="post-thumb">
