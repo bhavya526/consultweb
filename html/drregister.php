@@ -135,8 +135,24 @@ session_start();
 </div>
 
 <div class="form-outline mb-4">
-  <input type="text" id="form2Example17" class="form-control form-control-lg" name="sp" value="">
-  <label class="form-label" for="form2Example17" style="font-size:13px">Specialization</label>
+  
+  
+  <select name="sp" id="form2Example17" class="form-control form-control-lg">
+    <option selected="yes">
+     
+    </option>
+    <option>
+      Gynaecologist
+    </option>
+      <option>
+      General Physician
+      </option>
+      <option>
+      Orthopedic
+      </option>
+    </select>
+    <label class="form-label" for="form2Example17" style="font-size:13px">Specialization</label>
+
 </div>
 
 <div class="form-outline mb-4">
