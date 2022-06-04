@@ -129,7 +129,7 @@
       while($row=mysqli_fetch_array($r))
           {
              echo "
-             <form action='movetocart.php' method='POST'>
+             <form action='movetocart.php?a=$row[0]' method='POST'>
              <div class='page-section pb-0'>
              <div class='container'>
                <div class='row align-items-center'>
@@ -144,12 +144,31 @@
                      </a>
                      <br>"; 
                      
-                     if(isset($_SESSION['cart']))
+                     if(isset($_SESSION['sno']) )
                      {
                 
-                if($_SESSION["cart"]==$row[0])
+                if($_SESSION["sno"]==$row[0])
                 {
                   echo "<input type='submit' value='View Cart' class='btn btn-primary' style='margin-left:17.5em'>";
+                }
+                else
+                {
+                  $rr=mysqli_query($con,"select * from cart where name='$row[1]'");
+                  if($roww=mysqli_fetch_array($rr))
+                  {
+                    if($row[1]==$roww[1])
+                    {
+                      echo "<input type='submit' value='View Cart' class='btn btn-primary' style='margin-left:17.5em'>"; 
+                    }
+                    else
+                    {
+                      echo "<input type='submit' value='Add to cart' class='btn btn-primary' style='margin-left:17.5em'>";
+                    }
+                  }
+
+
+                  echo "<input type='submit' value='Add to cart' class='btn btn-primary' style='margin-left:17.5em'>";
+                  
                 }
               } 
                   else 

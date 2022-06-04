@@ -6,9 +6,11 @@
       $medcom=$_POST["m2"];
       $medprice=$_POST["m3"];
       $meddesc=$_POST["m4"];
-      $medp=$_POST["myfile"];
+      move_uploaded_file($_FILES["myfile"]["tmp_name"],"../medicineimages/".$_FILES["myfile"]["name"]);
+      $pic=$_FILES["myfile"]["name"];
 
-      $r=mysqli_query($con,"insert into medicines(MedName,manufacturer,Price,Description,photo) values('$mednm','$medcom','$medprice','$meddesc','$medp') ");
+
+      $r=mysqli_query($con,"insert into medicines(MedName,manufacturer,Price,Description,photo) values('$mednm','$medcom','$medprice','$meddesc','$pic') ");
       if($r)
       header("location:addmed.php");
 

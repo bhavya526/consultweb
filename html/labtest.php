@@ -1,6 +1,17 @@
 
 <?php
    session_start();
+   
+$ch=curl_init();
+curl_setopt($ch,CURLOPT_URL,'http://ip-api.com/json');
+curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+$result=curl_exec($ch);
+$result=json_decode($result);
+if($result->status=='success')
+ {  $citydisplay = $result->city;
+    $regiondisplay=$result->regionName;
+  
+ }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,6 +53,7 @@
           </div>
           <div class="col-sm-4 text-right text-sm">
             <div class="social-mini-button">
+             <?php echo $citydisplay; ?>
               <a href="#"><span class="mai-logo-facebook-f"></span></a>
               <a href="#"><span class="mai-logo-twitter"></span></a>
               <a href="#"><span class="mai-logo-dribbble"></span></a>
