@@ -77,10 +77,10 @@
               <a class="nav-link" href="doctors.html">Video Consulation</a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="medicine.php">Medicines</a>
+              <a class="nav-link" href="../html/medicine.php">Medicines</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="labtest.php">Lab Tests</a>
+              <a class="nav-link" href="../html/labtest.php">Lab Tests</a>
             </li>
             <li class="nav-item">
               <a class="btn btn-primary ml-lg-3" href="login.php">Login / Register</a>
@@ -109,9 +109,10 @@
                     <div class="row g-4">
                     <?php
                         $con=mysqli_connect("localhost","root","","drconsult");
-                        $r=mysqli_query($con,"select * from dregister where Id=9");
-                        $rowo=mysqli_fetch_array($r);
-                        echo "
+                        $r=mysqli_query($con,"select * from dregister ");
+                        while($rowo=mysqli_fetch_array($r))
+                        {
+                          echo "
                         
                         <div class='col-xl-3 col-lg-4 col-md-6'>
                         <form action='viewdocdetails.php' method='POST'>
@@ -140,110 +141,11 @@
                             </div>
                             </form>
                         </div>";
+
+                        }
+                        
                       ?>
 
-
-                        <?php
-                        $con=mysqli_connect("localhost","root","","drconsult");
-                        $r=mysqli_query($con,"select * from dregister where Id=4");
-                        $roww=mysqli_fetch_array($r);
-                        echo "
-
-                        <div class='col-xl-3 col-lg-4 col-md-6'>
-                        <form action='viewdocdetails.php' method='POST'>
-                            <div class='product-item'>
-                            <div class='position-relative bg-light overflow-hidden'>
-                            <img class='img-fluid' src='../docimageregistered/$roww[7]' style='height:13.75em;width:17.8125em;  display: block;
-                            margin-left: auto;
-                            margin-right: auto;' alt=''>
-                            <div class='bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3'>New</div>
-                        </div>
-                                <div class='text-center p-4'>
-                                    <a class='d-block h5 mb-2' href=''>$roww[1]</a>
-                                    <span class='text-primary me-1'>$roww[4]</span>
-                                    <span class='text-body text-decoration-line-through'></span>
-                                    <input type='text' value='$roww[2]' name='vv1' hidden >
-                                </div>
-                                <div class='d-flex border-top'>
-                                    <small class='w-50 text-center border-end py-2'>
-                                    <input 'text-body fa fa-eye text-primary me-2' type='submit' value='View Details' style='border:none; background-color:white'>
-                                    </small>
-                                    <small class='w-50 text-center py-2'>
-                                        <a class='text-body' href=''><i class='fa fa-shopping-bag text-primary me-2'></i>Consult</a>
-                                    </small>
-                                </div>
-                            </div>
-                            </form>
-                        </div>";
-                      ?>
-
-                        <?php
-                        $con=mysqli_connect("localhost","root","","drconsult");
-                        $r=mysqli_query($con,"select * from dregister where Id=9");
-                        $rows=mysqli_fetch_array($r);
-                         echo "
-                         <div class='col-xl-3 col-lg-4 col-md-6 wow ' data-wow-delay='0.5s'>
-                         <form action='viewdocdetails.php' method='POST'>
-                            <div class='product-item'>
-                                <div class='position-relative bg-light overflow-hidden'>
-                                    <img class='img-fluid' src='../docimageregistered/$rows[7]' style='height:13.75em;width:10em;  display: block;
-                                    margin-left: auto;
-                                    margin-right: auto;' alt=''>
-                                    <div class='bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3'>New</div>
-                                </div>
-                                <div class='text-center p-4'>
-                                    <a class='d-block h5 mb-2' href=''>$rows[1]</a>
-                                    <span class='text-primary me-1'>$rows[4]</span>
-                                    <span class='text-body text-decoration-line-through'></span>
-                                    <input type='text' value='$rows[2]' name='vv1' hidden >
-                                </div>
-                                <div class='d-flex border-top'>
-                                    <small class='w-50 text-center border-end py-2'>
-                                    <input 'text-body fa fa-eye text-primary me-2' type='submit' value='View Details' style='border:none; background-color:white'>
-                                    </small>
-                                    <small class='w-50 text-center py-2'>
-                                        <a class='text-body' href=''><i class='fa fa-shopping-bag text-primary me-2'></i>Consult</a>
-                                    </small>
-                                </div>
-                            </div>
-                            </form>
-                        </div>
-                        ";
-                        ?>
-                        <?php
-                        $con=mysqli_connect("localhost","root","","drconsult");
-                        $r=mysqli_query($con,"select * from dregister");
-                        $row=mysqli_fetch_array($r);
-                        echo "
-
-                        <div class='col-xl-3 col-lg-4 col-md-6'>
-                        <form action='viewdocdetails.php' method='POST'>
-                            <div class='product-item'>
-                            <div class='position-relative bg-light overflow-hidden'>
-                            <img class='img-fluid' src='../docimageregistered/$row[7]' style='height:13.75em;width:17.8125em;  display: block;
-                            margin-left: auto;
-                            margin-right: auto;' alt=''>
-                            <div class='bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3'>New</div>
-                        </div>
-                                <div class='text-center p-4'>
-                                    <a class='d-block h5 mb-2' href=''>$row[1]</a>
-                                    <span class='text-primary me-1'>$row[4]</span>
-                                    <span class='text-body text-decoration-line-through'></span>
-                                    <input type='text' value='$row[2]' name='vv1' hidden >
-                                </div>
-                                <div class='d-flex border-top'>
-                                    <small class='w-50 text-center border-end py-2'>
-                                    <input 'text-body fa fa-eye text-primary me-2' type='submit' value='View Details' style='border:none; background-color:white'>
-                                    </small>
-                                    <small class='w-50 text-center py-2'>
-                                        <a class='text-body' href=''><i class='fa fa-shopping-bag text-primary me-2'></i>Consult</a>
-                                    </small>
-                                </div>
-                            </div>
-                            </form>
-                        </div>";
-                      ?>
-                       
                                                <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
                                                  <br><br>
                             <a class="btn btn-primary rounded-pill py-3 px-5" href="">Browse More</a>
