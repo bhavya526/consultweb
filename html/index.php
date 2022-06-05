@@ -56,14 +56,7 @@
       <div class="container">
         <a class="navbar-brand" href="#"><span class="text-primary">One</span>-Health</a>
 
-        <form action="#">
-          <div class="input-group input-navbar">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
-            </div>
-            <input type="text" class="form-control" placeholder="Search doctors.." aria-label="Username" aria-describedby="icon-addon1">
-          </div>
-        </form>
+        
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -266,13 +259,13 @@
           <div class="card-blog">
             <div class="header">
               
-              <a href="blog-details.html" class="post-thumb">
+              <a href="article.php" class="post-thumb">
                 <img src="../assets/img/blog/treat.jpg" alt="">
               </a>
             </div>
             <div class="body">
             <span style='color:blue'>Your health</span><br> 
-              <h5 class="post-title"><a href="blog-details.html">Health myths you must be aware of!</a></h5>
+              <h5 class="post-title"><a href="article.php">Health myths you must be aware of!</a></h5>
               <div class="site-info">
                 
                 <div class="avatar mr-2">
@@ -288,18 +281,18 @@
           <div class="card-blog">
             <div class="header">
               
-              <a href="blog-details.html" class="post-thumb">
+              <a href="article.php" class="post-thumb">
                 <img src="../assets/img/blog/food1.jpg" alt="">
               </a>
               </div>
             <div class="body">
             <span style='color:blue'>Diet</span><br> 
-              <h5 class="post-title"><a href="blog-details.html">Health foods that helps you be fit!</a></h5>
+              <h5 class="post-title"><a href="article.php">Health foods that helps you be fit!</a></h5>
               <div class="site-info">
                 
                 <div class="avatar mr-2">
                   
-                  <span>Dr. Alisha Anum</span>
+                  <span>Dr. Bhavya Sharma</span>
                 </div>
                 
               </div>

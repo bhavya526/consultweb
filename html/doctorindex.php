@@ -74,6 +74,28 @@
               <a class="nav-link" href="doctors.html">Visited Patients</a>
             </li>
             
+
+            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:red";>Join Calls</a>
+                                <div class="dropdown-menu">
+                                <a class="dropdown-item" href="adminlogin.php" style="color:black;">
+                              <?php
+                              
+                              $con=mysqli_connect("localhost","root","","drconsult");
+                              $r=mysqli_query($con,"select * from urll");
+                              if($row=mysqli_fetch_array($r))
+                              {
+                                echo "<a href=$row[1]> Call Patient</a>";
+                              }
+
+                              
+                              ?>
+                              </a>
+                                    
+                                    
+                                </div>
+
+            
             <li class="nav-item">
               <?php
               if(isset($_SESSION['dlog']))
