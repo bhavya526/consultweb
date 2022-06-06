@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
+<script>
+   $(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    } );
+} )
+</script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+
+
+
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -97,76 +120,59 @@
     </div>
   </div>
   <br><br>
-  <div class="tab-content">
-                <div id="tab-1" class="tab-pane fade show p-0 active">
-                    <div class="row g-4">
-                    <?php
-                        $con=mysqli_connect("localhost","root","","drconsult");
-                        $r=mysqli_query($con,"select * from dregister ");
-                        while($rowo=mysqli_fetch_array($r))
-                        {
-                          echo "
-                        
-                        <div class='col-xl-3 col-lg-4 col-md-6'>
-                        <form action='viewdocdetails.php' method='POST'>
-                            <div class='product-item'>
-                            <div class='position-relative bg-light overflow-hidden'>
-                            <img class='img-fluid' src='../docimageregistered/$rowo[7]' style='height:13.75em;width:10em;  display: block;
-                            margin-left: auto;
-                            margin-right: auto;' alt=''>
-                            <div class='bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3'>New</div>
-                        </div>
-                                <div class='text-center p-4'>
-                                    <a class='d-block h5 mb-2' href=''>$rowo[1]</a>
-                                    <span class='text-primary me-1'>$rowo[4]</span>
-                                    <span class='text-body text-decoration-line-through'></span>
-                                    <input type='text' value='$rowo[2]' name='vv1' hidden >
-                                </div>
-                                <div class='d-flex border-top'>
-                                    <small class='w-50 text-center border-end py-2'>
-                                         <input 'text-body fa fa-eye text-primary me-2' type='submit' value='View Details' style='border:none; background-color:white'>
-                                         
-                                    </small>
-                                    <small class='w-50 text-center py-2'>
-                                        <a class='text-body' href=''><i class='fa fa-shopping-bag text-primary me-2'></i>Consult</a>
-                                    </small>
-                                </div>
-                            </div>
-                            </form>
-                        </div>";
-
-                        }
-                        
-                      ?>
-
-                                               <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                                                 <br><br>
-                            <a class="btn btn-primary rounded-pill py-3 px-5" href="">Browse More</a>
-                        </div>
-                    </div>
-                </div>
-                <br><br>
-               
-                       
+ <div class="container">
+  <table id="example"  class="display" style=';;margin-left:-1.875em !important ' >
+         <thead>
+             <tr style='color:black;font-weight:bold'>
+                 <th style='text-align:center'></th>
+                 <th style='text-align:center;width:14em'>Name</th>
+                 
+		         <th style='text-align:center;width:14em'>Registration ID</th>
+           
+			     <th style='text-align:center;width:14em'>Registered Year</th>
+           
+           <th style='text-align:center;width:14em'>Specialization</th>
+          
+           <th style='text-align:center;width:14em'>Phone Number</th>
+          
+           <th style='text-align:center;width:14em'>Timings </th>
+				 <th></th>
+				 <th></th>
+				 <th></th>
+				 
+             </tr>
+         </thead><tbody>
+	<?php
+	 $sno=1;
+	     $con=mysqli_connect("localhost","root","","drconsult");
+         $s=mysqli_query($con,"select * from dregister");
+	  
+	     
+	              while($row=mysqli_fetch_array($s))
+                 {
+                    echo "<tr style='color:black;'>";
+                    echo "<td align='center'><img src='../docimageregistered/$row[7]' style='height:8rem;width:6rem;border-radius:50%'></td>";
+                         echo "<td align='center'>$row[1]</td>";
+                         echo "<td align='center'>$row[2]</td>";
+                         echo "<td align='center'>$row[3]</td>";
+                         echo "<td align='center'>$row[4]</td>";
+                         echo "<td align='center'>$row[5]</td>";
+                         echo "<td align='center'>10:00 A.M. - 8:00 P.M.</td>";
+                         
+                         echo "<td></td>";
+                         echo "<td></td>";  
+  
+                         echo "<td><a href='del.php?a=$row[0]'><input class='btn btn-success'  type='submit' value='Book Appointment'></a></td>";
+                         echo "</tr>";
+                         $sno++;
+					}
+					
+					?>
+          
                       
-                    
-
-
-                       
-                        
-                        
-                       
-                       
-                       
-                    </div>
-                </div>
-                  
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>    
-        
+			</tbody></table>	
+      <br><br>
+        </div> 
 
      
 

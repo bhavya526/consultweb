@@ -1,5 +1,57 @@
 <?php
   session_start();
+  if(isset($_POST["add_to_cart"]))
+{
+	if(isset($_SESSION["shopping_cart"]))
+	{
+		$item_array_id = array_column($_SESSION["shopping_cart"], "item_id");
+		if(!in_array($_GET["id"], $item_array_id))
+		{
+			$count = count($_SESSION["shopping_cart"]);
+			$item_array = array(
+				'item_id'			=>	$_GET["id"],
+				'item_name'			=>	$_POST["hidden_name"],
+				'item_price'		=>	$_POST["hidden_price"],
+				'item_quantity'		=>	$_POST["quantity"]
+			);
+			$_SESSION["shopping_cart"][$count] = $item_array;
+		}
+		else
+		{
+			echo '<script>alert("Item Already Added")</script>';
+		}
+	}
+	else
+	{
+		$item_array = array(
+			'item_id'			=>	$_GET["id"],
+			'item_name'			=>	$_POST["hidden_name"],
+			'item_price'		=>	$_POST["hidden_price"],
+			'item_quantity'		=>	$_POST["quantity"]
+		);
+		$_SESSION["shopping_cart"][0] = $item_array;
+	}
+}
+
+if(isset($_GET["action"]))
+{
+	if($_GET["action"] == "delete")
+	{
+		foreach($_SESSION["shopping_cart"] as $keys => $values)
+		{
+			if($values["item_id"] == $_GET["id"])
+			{
+				unset($_SESSION["shopping_cart"][$keys]);
+				echo '<script>alert("Item Removed")</script>';
+				echo '<script>window.location="buymedi.php"</script>';
+			}
+		}
+	}
+}
+
+
+
+
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +75,15 @@
 
   <link rel="stylesheet" href="../assets/css/theme.css">
 </head>
+
+
+
+
+
+
+
+
+
 <body>
 
   <!-- Back to top button -->
@@ -53,6 +114,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
+        
         <a class="navbar-brand" href="#"><span class="text-primary">One</span>-Health</a>
 
         <form action="#">
@@ -74,7 +136,7 @@
               <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Doctors</a>
+              <a class="nav-link" href="../showproductaddoctors/showdoctors.php">Doctors</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="doctors.html">Video Consulation</a>
@@ -122,78 +184,131 @@
       </div>
     </div>
   </div>
-  <?php
-      
-      $con=mysqli_connect("localhost","root","","drconsult");
-      $r=mysqli_query($con,"select * from medicines");
-      while($row=mysqli_fetch_array($r))
-          {
-             echo "
-             <form action='movetocart.php?a=$row[0]' method='POST'>
-             <div class='page-section pb-0'>
-             <div class='container'>
-               <div class='row align-items-center'>
-               <div class='col-lg-5 wow' data-wow-delay='400ms'>
-                    <a href=''>
-                      <div class='img-place custom-img-1' style=';height:15.625em;width:22.625em;'>";
-                     
-                      
-                       echo "<img src='../medicineimages/$row[5]'>";
-                        
-                       echo "</div>
-                     </a>
-                     <br>"; 
-                     
-                     if(isset($_SESSION['sno']) )
-                     {
-                
-                if($_SESSION["sno"]==$row[0])
-                {
-                  echo "<input type='submit' value='View Cart' class='btn btn-primary' style='margin-left:17.5em'>";
-                }
-                else
-                {
-                  $rr=mysqli_query($con,"select * from cart where name='$row[1]'");
-                  if($roww=mysqli_fetch_array($rr))
-                  {
-                    if($row[1]==$roww[1])
-                    {
-                      echo "<input type='submit' value='View Cart' class='btn btn-primary' style='margin-left:17.5em'>"; 
-                    }
-                    else
-                    {
-                      echo "<input type='submit' value='Add to cart' class='btn btn-primary' style='margin-left:17.5em'>";
-                    }
-                  }
+
+  
 
 
-                  echo "<input type='submit' value='Add to cart' class='btn btn-primary' style='margin-left:17.5em'>";
-                  
-                }
-              } 
-                  else 
-                  {
-                    echo "<input type='submit' value='Add to cart' class='btn btn-primary' style='margin-left:17.5em'>";
-                  }
-       
-                   echo"  <input type='text' value='$row[0]' name='med1' hidden>
-                     
-                     </div>
-                <div class='col-lg-7 py-3 wow '>
-                <h3>$row[1]</h3>";
-                echo "Manufacturer: $row[2]<br>";
-                     echo "Price: <B>$row[3]</B><br><br>";
-                     echo "$row[4]<br>
-                     </div>
-              
-                     </div>
-                   </div>
-                 </div> <!-- .bg-light -->
-               </div> <!-- .bg-light -->
-                 </form>                
-                     ";
-          }
-            ?>
+
+  <body>
+		<br />
+		<div class="container">
+    <div class="row">
+			<br />
+			<br />
+			<br />
+			<br /><br />
+			<?php
+        $connect=mysqli_connect("localhost","root","","drconsult");
+				$query = "select * from medicines";
+				$result = mysqli_query($connect, $query);
+				if(mysqli_num_rows($result) > 0)
+				{
+					while($row = mysqli_fetch_array($result))
+					{
+				?>
+			<div class="col-lg-3">
+				<form method="post" action="buymedi.php?action=add&id=<?php echo $row[0]; ?>">
+					<div style="border:1px solid #333; background-color:#f1f1f1; border-radius:0.3125rem; padding:1rem;" text-align="center">
+						<img src="../medicineimages/<?php echo $row["photo"] ?>" class="img-responsive" style='height:10em;width:8em' /><br />
+
+						<h4 class="text-info"><?php echo $row["MedName"]; ?></h4>
+
+						<h4 class="text-danger">INR <?php echo $row["Price"]; ?></h4>
+
+						<input type="text" name="quantity" value="1" class="form-control" />
+
+						<input type="hidden" name="hidden_name" value="<?php echo $row["MedName"]; ?>" />
+
+						<input type="hidden" name="hidden_price" value="<?php echo $row["Price"]; ?>" />
+
+						<input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
+
+					</div>
+          
+				</form>
+			</div>
+			<?php
+					}
+				}
+			?>
+			<div style="clear:both"></div>
+			<br />
+      </div>
+      <br><br>
+			<h3>Order Details</h3>
+			<div class="table-responsive">
+        <form method="POST" action="pgRedirect.php" >
+				<table class="table table-bordered">
+					<tr>
+						<th width="40%">Item Name</th>
+						<th width="10%">Quantity</th>
+						<th width="20%">Price</th>
+						<th width="15%">Total</th>
+						<th width="5%">Action</th>
+					</tr>
+					<?php
+					if(!empty($_SESSION["shopping_cart"]))
+					{
+						$total = 0;
+						foreach($_SESSION["shopping_cart"] as $keys => $values)
+						{
+					?>
+					<tr>
+						<td><?php echo $values["item_name"]; ?></td>
+						<td><?php echo $values["item_quantity"]; ?></td>
+						<td>INR <?php echo $values["item_price"]; ?></td>
+						<td>INR <?php echo number_format($values["item_quantity"] * $values["item_price"], 2);?></td>
+						<td><a href="buymedi.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
+					</tr>
+					<?php
+							$total = $total + ($values["item_quantity"] * $values["item_price"]);
+						}
+					?>
+					<tr>
+						<td colspan="3" align="right">Total</td>
+						<td align="right">INR <?php echo number_format($total, 2); ?></td>
+            <td><input type="text" value="<?php echo $total ?>" name="total" hidden></td>
+						<td><input type="submit" value="Pay Now" class="btn btn-success"></td>
+					</tr>
+					<?php
+					}
+					?>
+						
+				</table>
+        </form>
+			</div>
+        
+		</div>
+	</div>
+	<br />
+	</body>
+</html>
+
+<?php
+//If you have use Older PHP Version, Please Uncomment this function for removing error 
+
+/*function array_column($array, $column_name)
+{
+	$output = array();
+	foreach($array as $keys => $values)
+	{
+		$output[] = $values[$column_name];
+	}
+	return $output;
+}*/
+?>
+
+
+
+
+
+
+
+
+
+
+
+ 
   
   <footer class="page-footer">
     <div class="container">
