@@ -249,10 +249,13 @@ if(isset($_GET["action"]))
 					<?php
 					if(!empty($_SESSION["shopping_cart"]))
 					{
+           
 						$total = 0;
 						foreach($_SESSION["shopping_cart"] as $keys => $values)
 						{
+              
 					?>
+                        
 					<tr>
 						<td><?php echo $values["item_name"]; ?></td>
 						<td><?php echo $values["item_quantity"]; ?></td>
@@ -262,7 +265,20 @@ if(isset($_GET["action"]))
 					</tr>
 					<?php
 							$total = $total + ($values["item_quantity"] * $values["item_price"]);
+              $_SESSION["total"]=$total;
+              $iname=$values["item_name"];
+              $iquan=$values["item_quantity"];
+              $iprice=$values["item_price"];
+
+              echo "<input type='text' value='$iname' name='inm[]' hidden>";
+              echo "<input type='text' value='$iquan' name='iquan[]' hidden>";
+              echo "<input type='text' value='$iprice' name='iprice[]' hidden>";
+              
+
+              
+
 						}
+           
 					?>
 					<tr>
 						<td colspan="3" align="right">Total</td>

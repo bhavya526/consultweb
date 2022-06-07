@@ -6,7 +6,7 @@
       $pp=$_POST["sai"];
 
       $r=mysqli_query($con,"select * from registrationdetails");
-      if($row=mysqli_fetch_array($r))
+      while($row=mysqli_fetch_array($r))
       {
         if($row[2]==$mn or $row[3]==$mn)
         {
