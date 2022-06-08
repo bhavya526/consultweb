@@ -17,13 +17,14 @@
       <div class='container'>
         <h3 class='wow fadeInUp' style='font-family: Trebuchet MS, sans-serif;'>Top booked diagnostic tests</h3>
         <div class='row mt-5'>
-              
-  
-              
+              <form method='POST' action=''>
+                 <table>
+                   <tr>
+                     <td colspan=2>One-Health</td>
   
             
-  
-             
+                 </table>
+             </form>
               </div>
               </div>
               </div>

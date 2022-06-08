@@ -103,7 +103,20 @@ session_start();
               <a class="nav-link" href="../html/labtest.php">Lab Tests</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-primary ml-lg-3" href="login.php">Login / Register</a>
+            <?php
+              if(isset($_SESSION['log']))
+              {
+                $logornot=$_SESSION["log"];
+                if($logornot=="yes")
+                {
+                  echo "<a class='btn btn-primary ml-lg-3' href='logout.php'>Logout</a>";
+                }
+              } 
+                  else 
+                  {
+                    echo  "<a class='btn btn-primary ml-lg-3' href='login.php'>Login / Register</a>";
+                  }
+               ?>
             </li>
           </ul>
         </div> <!-- .navbar-collapse -->
@@ -164,20 +177,29 @@ session_start();
                          echo "<td align='center'>10:00 A.M. - 8:00 P.M.</td>";
                          
                          echo "<td></td>";
-                         echo "<td></td>";  
-                          
+                         echo "<td> </td>";  
+                         $_SESSION["docname"]=$row[1];
                          
                          if(isset($_SESSION["join"]))
                          {
-                           $df=$row[0];
-                           if($_SESSION["join"]=$df)
-                           {
-                             echo "<td><a href='book.php?a=$row[0]'><input class='btn btn-success'  type='submit' value='Join'></a></td>";
-                           }
+                           
+                           
                          } 
                              else 
                              {
-                               echo  "<td><a href='book.php?a=$row[0]'><input class='btn btn-success'  type='submit' value='Book Appointment'></a></td>";
+                              if(isset($_SESSION["log"]))
+                              {
+                                 if($_SESSION["log"]="yes")
+                                 {
+                                  echo  "<td><a href='book.php?a=$row[0]'><input class='btn btn-success'  type='submit' value='Book Appointment'></a></td>";
+                                 }
+                              }
+                                 else{
+                                  echo  "<td><a href='../html/login.php'><input class='btn btn-success'  type='submit' value='Book Appointment'></a></td>";
+                                 }
+
+
+                              
                              }
                           
 

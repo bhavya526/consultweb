@@ -12,6 +12,7 @@
         {
             if($row[4]==$pp)
             { 
+                $_SESSION["username"]=$mn;
                 $_SESSION["log"]="yes";
                 header("location:index.php");
             }
