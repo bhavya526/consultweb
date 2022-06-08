@@ -18,3 +18,4 @@
         $_SESSION["sno"]=$sno;
         header("location:buymedi.php"); 
      }
+?>

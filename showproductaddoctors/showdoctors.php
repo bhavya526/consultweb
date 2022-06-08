@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -161,8 +165,24 @@
                          
                          echo "<td></td>";
                          echo "<td></td>";  
-  
-                         echo "<td><a href='del.php?a=$row[0]'><input class='btn btn-success'  type='submit' value='Book Appointment'></a></td>";
+                          
+                         
+                         if(isset($_SESSION["join"]))
+                         {
+                           $df=$row[0];
+                           if($_SESSION["join"]=$df)
+                           {
+                             echo "<td><a href='book.php?a=$row[0]'><input class='btn btn-success'  type='submit' value='Join'></a></td>";
+                           }
+                         } 
+                             else 
+                             {
+                               echo  "<td><a href='book.php?a=$row[0]'><input class='btn btn-success'  type='submit' value='Book Appointment'></a></td>";
+                             }
+                          
+
+
+                        
                          echo "</tr>";
                          $sno++;
 					}
