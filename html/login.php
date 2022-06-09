@@ -67,9 +67,7 @@ session_start();
             <li class="nav-item">
               <a class="nav-link" href="about.html">Doctors</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="doctors.html">Video Consulation</a>
-            </li>
+            
             <li class="nav-item">
               <a class="nav-link" href="medicine.php">Medicines</a>
             </li>

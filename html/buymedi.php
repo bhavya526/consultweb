@@ -138,9 +138,7 @@ if(isset($_GET["action"]))
             <li class="nav-item">
               <a class="nav-link" href="../showproductaddoctors/showdoctors.php">Doctors</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="doctors.html">Video Consulation</a>
-            </li>
+           
             <li class="nav-item active">
               <a class="nav-link" href="medicine.php">Medicines</a>
             </li>

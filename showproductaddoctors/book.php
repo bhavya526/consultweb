@@ -6,8 +6,10 @@ session_start();
 
 
 ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
 <div style='margin-left:40%';>
 <form method="POST" action="passaddress.php">
     <br><br><br><br><br><br>
@@ -17,7 +19,9 @@ session_start();
   
 
     <input type="textbox" name="amt" value="550" id="amt" hidden placeholder="Enter amt"/ ><br/><br/>
-    <input type="button" name="btn" id="btn" value="Confirm" onclick="pay_now()" style=""/>
+    <span><H1 style="margin-left:-2em">Proceed towards Payment</H1></span><br><br>
+    <button type="button" class="btn btn-primary"  onclick="pay_now()" style="margin-left:5em">Proceed</button>
+
 </form>
 </div>
 

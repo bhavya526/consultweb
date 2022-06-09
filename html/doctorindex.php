@@ -163,7 +163,7 @@
   <div class="page-section bg-light">
     <div class="container">
       <div class=" wow ">
-      <h1 class=" wow ">Orthopedics</h1>
+      
       </div>
       <?php
               if($row[4]=="Orthopedic")
