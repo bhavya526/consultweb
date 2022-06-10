@@ -1,13 +1,14 @@
 <?php
   session_start(); 
 ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
 <div style=''>
- <div style='margin-left:320px;' >
+ <div style='' >
  
  
 <?php
             $total= $_SESSION["total"];
-            $arr= $_SESSION["arr"];
+           
             $inm=$_SESSION["inm"];
             $iquan=$_SESSION["iquan"];
             $iprice=$_SESSION["iprice"];
@@ -209,7 +210,7 @@
                
                     </form>
             <div style='margin-left:65%'>
-                      <input type='submit' value='OK'>
+                      <input type='submit' class="btn btn-primary" value='OK'>
                     </div>
 
 

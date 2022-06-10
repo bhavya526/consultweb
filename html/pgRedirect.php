@@ -1,7 +1,7 @@
 <?php
 session_start();
 ?>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
 <div style='margin-left:40%';>
 <form method="POST" action="passaddress.php">
     <br><br><br><br><br><br>
@@ -37,7 +37,7 @@ session_start();
     <input type='text' value=" " name="aa"  required/>
     
     <input type="textbox" name="amt" value="<?php echo $_SESSION["total"] ;?>" id="amt" hidden placeholder="Enter amt"/ ><br/><br/>
-    <input type="submit" name="btn" id="btn" value="Proceed towards Payment"  style=""/>
+    <input type="submit" class="btn btn-primary" name="btn" id="btn" value="Proceed towards Payment"  style=""/>
 </form>
 </div>
 

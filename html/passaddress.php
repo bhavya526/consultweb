@@ -12,6 +12,7 @@ $total=$_SESSION["total"];
 
 
 ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <div style='margin-left:40%';>
@@ -28,7 +29,7 @@ $total=$_SESSION["total"];
     <input type='text' value="<?php echo $num; ?>" name="aa" style='border:none;focus:none'/>
 
     <input type="textbox" name="amt" value="<?php echo $_SESSION["total"] ;?>" id="amt" hidden placeholder="Enter amt"/ ><br/><br/>
-    <input type="button" name="btn" id="btn" value="Confirm" onclick="pay_now()" style=""/>
+    <input type="button" class="btn btn-primary" name="btn" id="btn" value="Confirm" onclick="pay_now()" style=""/>
 </form>
 </div>
 

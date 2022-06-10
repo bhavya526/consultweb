@@ -72,6 +72,7 @@
             <li class="nav-item">
               <a class="nav-link" href="labtest.php">Lab Tests</a>
             </li>
+            
             <li class="nav-item">
               <?php
               if(isset($_SESSION['log']))
@@ -84,7 +85,7 @@
               } 
                   else 
                   {
-                    echo  "<a class='btn btn-primary ml-lg-3' href='login.php'>Login / Register</a>";
+                    echo  "<a class='btn btn-primary ml-lg-3' href='login.php'>Logout</a>";
                   }
                ?>
             </li>
