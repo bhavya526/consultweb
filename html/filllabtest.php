@@ -76,9 +76,7 @@
             <li class="nav-item">
               <a class="nav-link" href="about.html">Doctors</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="doctors.html">Video Consulation</a>
-            </li>
+            
             <li class="nav-item">
               <a class="nav-link" href="medicine.php">Medicines</a>
             </li>
@@ -136,7 +134,8 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary mt-3 wow zoomIn">Book Now </button>
+        <input type="submit" class="btn btn-primary mt-3 wow zoomIn" value="Book Now">
+        
         
       </form>
         <br><br>

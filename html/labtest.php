@@ -217,7 +217,7 @@ if($result->status=='success')
           <div class="card-blog" style="border: 2px solid red;height:8em;width:8em; border-radius:50%;">
             <div class="header" >
               
-              <a href="blog-details.html" class="post-thumb">
+              <a href="article.php" class="post-thumb">
                 <img src="../assets/img/fever.jpg" alt="" >  
               </a> 
             </div>
@@ -237,7 +237,7 @@ if($result->status=='success')
         <div class="col-lg-2 py-2 wow zoomIn text-center">
           <div class="card-blog" style="border: 2px solid red;height:8em;width:8em; border-radius:50%;">
             <div class="header">
-              <a href="blog-details.html" class="post-thumb">
+              <a href="article.php" class="post-thumb">
                 <img src="../assets/img/skin.jpg" alt="">
               </a>
             </div>
@@ -247,7 +247,7 @@ if($result->status=='success')
         <div class="col-lg-2 py-2 wow zoomIn text-center">
           <div class="card-blog" style="border: 2px solid red;height:8em;width:8em; border-radius:50%;">
             <div class="header">
-              <a href="blog-details.html" class="post-thumb">
+              <a href="article.php" class="post-thumb">
                 <img src="../assets/img/digestion.jpg" alt="">
               </a>
             </div>
@@ -257,7 +257,7 @@ if($result->status=='success')
         <div class="col-lg-2 py-2 wow zoomIn text-center">
           <div class="card-blog" style="border: 2px solid red;height:8em;width:8em; border-radius:50%;">
             <div class="header">
-              <a href="blog-details.html" class="post-thumb">
+              <a href="article.php" class="post-thumb">
                 <img src="../assets/img/kidney.jpg" alt="">
               </a>
             </div> 
@@ -267,7 +267,7 @@ if($result->status=='success')
         <div class="col-lg-2 py-2 wow zoomIn text-center">
           <div class="card-blog" style="border: 2px solid red;height:8em;width:8em; border-radius:50%;">
             <div class="header">
-              <a href="blog-details.html" class="post-thumb">
+              <a href="article.php" class="post-thumb">
                 <img src="../assets/img/pain.jpg" alt="">
               </a>
             </div>

@@ -62,7 +62,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -202,7 +202,7 @@
       <div class="container text-center wow zoomIn">
           <br>
         <span class="subhead" style='color:black'>Let's make it easy</span><br>
-        <span class="display-4" style="height:1em;color:black">Add Medicines for sale</span>
+        <span class="display-4" style="height:1em;color:black">View Medicines</span>
         <br>
         <br>
         <a href="#" class="btn "></a>

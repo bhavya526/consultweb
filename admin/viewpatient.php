@@ -62,7 +62,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -89,12 +89,12 @@
                     <span>Delete Medicines</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="docview">
+                <a class="nav-link" href="viewdocadmin.php">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>View Doctors</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="docview">
+                <a class="nav-link" href="viewpatient.php">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>View Registered Patients</span></a>
             </li>
@@ -202,7 +202,7 @@
       <div class="container text-center wow zoomIn">
           <br>
         <span class="subhead" style='color:black'>Let's make it easy</span><br>
-        <span class="display-4" style="height:1em;color:black">Add Medicines for sale</span>
+        <span class="display-4" style="height:1em;color:black">View Registered Patients</span>
         <br>
         <br>
         <a href="#" class="btn "></a>

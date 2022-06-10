@@ -7,8 +7,7 @@ $_SESSION["add"]=$add;
 $_SESSION["num"]=$num;
 
 $total=$_SESSION["total"];
-$item1=$_SESSION["item1"];
-$item2=$_SESSION["item2"];
+
 
 
 

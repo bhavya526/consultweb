@@ -40,6 +40,11 @@ session_start();
                       $rr=mysqli_query($con,"insert into dregister(Name,regid,regy,Specialization,pno,password,photo) values('$nm','$reg1','$yr','$sp','$ph','$pwd','$pic') ");
                       if($rr)
                       {
+                        ?>
+                        <script>
+                          alert("Registered Successfylly!");
+                          </script>
+                        <?php
                          header("location:doctorlogin.php");
                       }
                     }
