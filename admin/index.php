@@ -35,7 +35,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">One-Health Admin <sup>2</sup></div>
             </a>
 
             <!-- Divider -->
@@ -61,16 +61,19 @@
                 <a class="nav-link" href="addmed.php">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Add Medicines</span></a>
-        
                
             </li>
+            
             <li class="nav-item">
                 <a class="nav-link" href="deletemed.php">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Delete Medicines</span></a>
+                    <span>View/Delete Medicines</span></a>
             </li>
+
+
+
             <li class="nav-item">
-                <a class="nav-link" href="viewdocadmin.php">
+                <a class="nav-link" href="../viewdocadmin.php">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>View Doctors</span></a>
             </li>

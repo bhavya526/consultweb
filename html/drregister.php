@@ -67,9 +67,7 @@ session_start();
             <li class="nav-item">
               <a class="nav-link" href="about.html">Doctors</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="doctors.html">Video Consulation</a>
-            </li>
+            
             <li class="nav-item">
               <a class="nav-link" href="medicine.php">Medicines</a>
             </li>
@@ -195,9 +193,8 @@ session_start();
 
 </div>
 
-<a class="small text-muted" href="#!">Forgot password?</a>
-<p class="mb-5 pb-lg-2" style="color: #393f81;">Login here <a href="doctorlogin.php"
-    style="color: #393f81;">Register here</a></p>
+<p class="mb-5 pb-lg-2" style="color: #393f81;"><a href="doctorlogin.php"
+    style="color: #393f81;">Login here</a></p>
 <a href="#!" class="small text-muted">Terms of use.</a>
 <a href="#!" class="small text-muted">Privacy policy</a>
 </form>

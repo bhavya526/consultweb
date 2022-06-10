@@ -89,7 +89,7 @@
                     <span>Delete Medicines</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="docview">
+                <a class="nav-link" href="viewdocadmin.php">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>View Doctors</span></a>
             </li>
